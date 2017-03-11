@@ -11,8 +11,7 @@ public class ConsoleApplication {
 		service.convertAmount(BigDecimal.valueOf(123.00), "EUR");
 		
 		
-		SecondRateConversionService service2 = contex.getBean(SecondRateConversionService.class);
-		service2.convertAmount(BigDecimal.valueOf(1244.00), "EUR");
+	
 	}
 	
 
