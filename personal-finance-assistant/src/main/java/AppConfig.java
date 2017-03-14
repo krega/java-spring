@@ -18,6 +18,16 @@ public class AppConfig {
 		
 		return rateConversionService; 
 	}
+	@Bean
+	public RoundPrecisionProvider roundPrecisionProvider()
+	{
+		return new FixedPrecisionProvider();
+	}
+	@Bean
+	public RoundPrecisionProvider roundJpyPrecisionProvider()
+	{
+		return new JpyFixedPrecisionProvider();
+	}
 	
 	
 }
