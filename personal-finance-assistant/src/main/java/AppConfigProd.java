@@ -9,18 +9,18 @@ import org.springframework.scheduling.annotation.EnableAsync;
 
 
 @Configuration
-@Profile({"dev", "!prod"})
+@Profile("prod")
 
 
-public class AppConfig {
+public class AppConfigProd {
+	
 	
 	@Bean
 	
-	public CurrencyRateProvider fileCurrencyRateProvider ()
+	public CurrencyRateProvider databaseCurrencyRateProvider ()
 	{
-		 return new FileCurrencyRateProvider();
+		 return new DatabaseCurrencyRateProvider();
 	}
-	
 	
 	@Bean
 	public RateConversionService rateConversionService()
