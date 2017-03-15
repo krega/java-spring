@@ -5,12 +5,13 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.scheduling.annotation.EnableAsync;
 
 
 @Configuration
 @Profile({"dev", "!prod"})
-
+@PropertySource("classpath:app.properties")
 
 public class AppConfig {
 	
